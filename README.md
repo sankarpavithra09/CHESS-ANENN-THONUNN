@@ -1,44 +1,58 @@
 # CHESS-ANENN-THONUNN
 
 **BASIC DETAILS**
+
 TEAM NAME: WARLOCKS
+
 TEAM MEMBERS: ALIM MARY ANTONY 
               PAVITHRA SANKAR
               
 PROJECT DESCRIPTION
+
 Normal Chess? Never heard of it.
 We took chess, swapped the rules between pieces, threw strategy out the window, and added a timer that eventually resets the chaos. Every piece has a new identity, every move is suspicious, and just when you think you've mastered the game… RESET.
 Same board. Different rules. Zero certainty. Maximum chaos. 😂
 
 **THE PROBLEM (THAT DOESN'T EXIST)**
+
 Chess has been following the same rules for centuries.
 But what if those rules were completely wrong?
 We created a game where confusion is the main objective.
 
 **THE SOLUTION(THAT NO ONE ASKED)**
+
 Wrong Chess transforms traditional chess by swapping piece movements and introducing unexpected rule changes.
 Players must adapt quickly instead of relying on familiar strategies, making every move unpredictable and fun.
 
 **TECHNICAL DETAILS**
+
 TECHNOLOGY COMPONENTS LIST
 FOR SOFTWARE:
+
  •LANGUAGES: HTML,CSS,JAVASCRIPT
  •Frameworks: None
  •Libraries: None
  •Tools: Visual Studio Code, Web Browser, GitHub
+ 
 IMPLIMENTATION
 FOR SOFTWARE:
+
 The game was implemented as a browser-based application using HTML, CSS, and JavaScript. HTML was used to structure the chessboard and game interface, CSS was used for the visual design, and JavaScript was used to implement the game logic, modified piece movements, player turns, and unexpected rule changes. The project was developed and tested using Visual Studio Code and a web browser.
 
 **INSTALLATION**
+
 [NO COMMAND]
 
 **RUN**
+
 [NO COMMAND]
+
 PROJECT DOCUMENTATION
+
 The software documentation provides a complete overview of the Wrong Chess game, from its concept and design to its implementation and testing. It explains the technologies used, game rules, modified piece movements, user interface, and overall game flow. It also includes screenshots of the application, testing results, and details of the major features implemented. The documentation helps users understand how the game works and how the software was developed.
 
 **SCREENSHOT**
+
 <img width="1876" height="811" alt="Screenshot 2026-09-12 090545" src="https://github.com/user-attachments/assets/2550f08c-a306-4d75-8d82-a140a2029888" />
 
 -The Welcome Page introduces Wrong Chess and provides an “Enter” button to start the unpredictable game.
