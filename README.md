@@ -32,7 +32,10 @@ FOR SOFTWARE:
  •LANGUAGES: HTML,CSS,JAVASCRIPT
  •Frameworks: None
  •Libraries: None
- •Tools: Visual Studio Code, Web Browser, GitHub
+ •Tools: Visual Studio Code, Web     Browser, GitHub
+For Hardware :
+ None
+ 
  
 IMPLIMENTATION
 FOR SOFTWARE:
@@ -68,8 +71,21 @@ The software documentation provides a complete overview of the Wrong Chess game,
 **DIAGRAM**
 <img width="1024" height="1536" alt="4204773a-9951-4100-8a95-8b5a1968a13f" src="https://github.com/user-attachments/assets/e2c075b3-3a31-4852-8c31-bb221974874c" />
 
+**Schematic and Circuit**
+None
+
+** Build Photos**
+None
+
 PROJECT DEMO
 https://sankarpavithra09.github.io/CHESS-ANENN-THONUNN/
 
 **VIDEO**
 https://drive.google.com/file/d/1C26eBBg0YLW_rI3d4HpmDsPOxYZuHZha/view?usp=drivesdk
+
+**Additional Demo**
+None
+
+**Team Contribution**
+1) Alin Mary Antony :Developed the chess game logic, implemented the swapped movement rules, random rule changes, and game reset mechanism.
+2) Pavithra Sankar  :Designed and developed the HTML/CSS interface, improved the visual presentation, integrated the game components, and handled testing and debugging.
