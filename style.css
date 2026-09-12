@@ -1,0 +1,710 @@
+/* =========================================================
+   WRONG CHESS — COMPLETE STYLE
+   ========================================================= */
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #242424 0%,
+            #0d0d0d 45%,
+            #000000 100%
+        );
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LANDING PAGE
+   ========================================================= */
+
+.landing-screen {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #202020 0%,
+            #0b0b0b 45%,
+            #000000 100%
+        );
+}
+
+
+/* Soft glow behind the title */
+
+.landing-screen::before {
+    content: "";
+
+    position: absolute;
+
+    width: 550px;
+    height: 550px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+
+/* Small decorative glow */
+
+.landing-screen::after {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    top: 10%;
+    right: 10%;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.015);
+
+    filter: blur(60px);
+
+    pointer-events: none;
+}
+
+
+/* ---------- MAIN TITLE ---------- */
+
+.landing-screen h1 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    font-size: clamp(42px, 7vw, 85px);
+
+    font-weight: 900;
+
+    line-height: 1.25;
+
+    color: #ffffff;
+
+    letter-spacing: 0;
+
+    text-shadow:
+        0 0 15px rgba(255, 255, 255, 0.15),
+        0 0 50px rgba(255, 255, 255, 0.05);
+}
+
+
+/* ---------- TAGLINE ---------- */
+
+.landing-tagline {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 25px;
+
+    font-size: 22px;
+
+    color: #d0d0d0;
+
+    letter-spacing: 1px;
+}
+
+
+/* ---------- DESCRIPTION ---------- */
+
+.landing-description {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+
+    margin-top: 25px;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    color: #777777;
+}
+
+.landing-description strong {
+    color: #ffffff;
+
+    font-weight: 700;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+
+/* ---------- ENTER BUTTON ---------- */
+
+.enter-button {
+    position: relative;
+    z-index: 2;
+
+    display: inline-block;
+
+    margin-top: 40px;
+
+    padding: 15px 58px;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.enter-button:hover {
+    transform: translateY(-5px);
+
+    background: #eeeeee;
+
+    box-shadow:
+        0 12px 35px rgba(255, 255, 255, 0.18),
+        0 0 60px rgba(255, 255, 255, 0.06);
+}
+
+.enter-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   CHESS GAME PAGE
+   ========================================================= */
+
+body:has(#board) {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 45px 20px 60px;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            #242424 0%,
+            #111111 35%,
+            #050505 70%,
+            #000000 100%
+        );
+}
+
+
+/* ---------- GAME TITLE ---------- */
+
+body:has(#board) > h1 {
+    margin: 0;
+
+    font-size: clamp(32px, 5vw, 55px);
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 15px rgba(255, 255, 255, 0.12),
+        0 0 40px rgba(255, 255, 255, 0.05);
+}
+
+
+/* ---------- SUBTITLE ---------- */
+
+.subtitle {
+    margin-top: 10px;
+
+    font-size: 15px;
+
+    color: #777777;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   GAME INFORMATION
+   ========================================================= */
+
+.game-info {
+    width: min(600px, 95%);
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+    padding: 14px 20px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.35);
+
+    color: #999999;
+
+    font-size: 14px;
+}
+
+.game-info div {
+    text-align: center;
+
+    min-width: 120px;
+}
+
+.game-info span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+#message {
+    min-height: 28px;
+
+    margin-top: 22px;
+
+    padding: 8px 18px;
+
+    color: #dddddd;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================================================
+   CHESS BOARD
+   ========================================================= */
+
+#board {
+    width: min(640px, 92vw);
+
+    aspect-ratio: 1 / 1;
+
+    display: grid;
+
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    margin-top: 28px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    border: 4px solid #2c2c2c;
+
+    background: #111111;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.75),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================================
+   CHESS SQUARES
+   ========================================================= */
+
+.square {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        filter 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+/* Light squares */
+
+.light {
+    background: #d8d8d8;
+}
+
+
+/* Dark squares */
+
+.dark {
+    background: #555555;
+}
+
+
+/* Hover */
+
+.square:hover {
+    filter: brightness(1.12);
+}
+
+
+/* =========================================================
+   CHESS PIECES
+   ========================================================= */
+
+.white-piece,
+.black-piece {
+    position: relative;
+
+    font-family:
+        "Segoe UI Symbol",
+        "Noto Sans Symbols",
+        Arial,
+        sans-serif;
+
+    font-size: clamp(32px, 6vw, 58px);
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease;
+}
+
+
+/* White pieces */
+
+.white-piece {
+    color: #ffffff;
+
+    text-shadow:
+        0 2px 2px rgba(0, 0, 0, 0.8),
+        0 0 3px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Black pieces */
+
+.black-piece {
+    color: #111111;
+
+    text-shadow:
+        0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+
+/* Piece hover */
+
+.square:hover .white-piece,
+.square:hover .black-piece {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   SELECTED PIECE
+   ========================================================= */
+
+.selected {
+    box-shadow:
+        inset 0 0 0 4px #ffffff,
+        inset 0 0 25px rgba(255, 255, 255, 0.25);
+
+    z-index: 5;
+}
+
+
+/* Make selected piece pop */
+
+.selected .white-piece,
+.selected .black-piece {
+    transform: scale(1.1);
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+
+/* =========================================================
+   VALID MOVE
+   ========================================================= */
+
+/*
+   Keep this class only if your JavaScript uses it.
+   The effect is intentionally subtle so the board
+   doesn't get covered in green dots.
+*/
+
+.valid {
+    box-shadow:
+        inset 0 0 0 2px rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================================
+   WRONG CHESS SPECIAL EFFECTS
+   ========================================================= */
+
+/* Slight glitch effect when hovering the board */
+
+#board:hover {
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.75),
+        0 0 35px rgba(255, 255, 255, 0.035);
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    body:has(#board) {
+        padding: 30px 12px 45px;
+    }
+
+    body:has(#board) > h1 {
+        font-size: 32px;
+
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .game-info {
+        width: 95%;
+
+        padding: 12px 8px;
+
+        gap: 5px;
+
+        font-size: 12px;
+    }
+
+    .game-info div {
+        min-width: 0;
+
+        flex: 1;
+    }
+
+    .game-info span {
+        font-size: 15px;
+    }
+
+    #board {
+        width: 95vw;
+
+        border-width: 3px;
+
+        border-radius: 10px;
+    }
+
+    .white-piece,
+    .black-piece {
+        font-size: clamp(27px, 9vw, 45px);
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .landing-screen {
+        padding: 20px;
+    }
+
+    .landing-screen h1 {
+        font-size: 38px;
+
+        line-height: 1.3;
+    }
+
+    .landing-tagline {
+        margin-top: 20px;
+
+        font-size: 17px;
+    }
+
+    .landing-description {
+        margin-top: 20px;
+
+        font-size: 13px;
+
+        line-height: 1.8;
+    }
+
+    .enter-button {
+        margin-top: 32px;
+
+        padding: 14px 45px;
+    }
+
+    body:has(#board) > h1 {
+        font-size: 27px;
+    }
+
+    .game-info {
+        margin-top: 20px;
+
+        border-radius: 10px;
+    }
+
+    #message {
+        margin-top: 15px;
+
+        font-size: 12px;
+    }
+
+    #board {
+        margin-top: 20px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA POLISH
+   ========================================================= */
+
+::selection {
+    background: #ffffff;
+
+    color: #000000;
+}
+
+
+/* Prevent ugly link outline while keeping accessibility */
+
+.enter-button:focus-visible {
+    outline: 2px solid #ffffff;
+
+    outline-offset: 5px;
+}
+
+
+/* Smooth appearance */
+
+.landing-screen h1,
+.landing-tagline,
+.landing-description,
+.enter-button {
+    animation: fadeUp 0.8s ease both;
+}
+
+.landing-tagline {
+    animation-delay: 0.12s;
+}
+
+.landing-description {
+    animation-delay: 0.22s;
+}
+
+.enter-button {
+    animation-delay: 0.32s;
+}
+
+
+/* ---------- Animation ---------- */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
