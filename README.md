@@ -74,7 +74,8 @@ The software documentation provides a complete overview of the Wrong Chess game,
 **Schematic and Circuit**
 None
 
-** Build Photos**
+**Build Photos**
+
 None
 
 PROJECT DEMO
@@ -84,8 +85,10 @@ https://sankarpavithra09.github.io/CHESS-ANENN-THONUNN/
 https://drive.google.com/file/d/1C26eBBg0YLW_rI3d4HpmDsPOxYZuHZha/view?usp=drivesdk
 
 **Additional Demo**
+
 None
 
 **Team Contribution**
+
 1) Alin Mary Antony :Developed the chess game logic, implemented the swapped movement rules, random rule changes, and game reset mechanism.
 2) Pavithra Sankar  :Designed and developed the HTML/CSS interface, improved the visual presentation, integrated the game components, and handled testing and debugging.
